@@ -1,15 +1,45 @@
-// const = 상수
-// let = 변수
-// var = 지양해야할 옛변수 let과 같음
-const a = 5;
-const b = 2;
-let myName = "uk";
+// object
+const player = {
+  name: "uk",
+  points: 10,
+  fat: false,
+};
 
-console.log(a + b);
-console.log(a * b);
-console.log(a % b);
-console.log("hello " + myName);
+console.log(player);
+console.log(player.name);
+console.log(player["name"]);
 
-myName = "wonuk";
+// 여기서의 const는 object이기 때문에 내부의 필드값은 수정할 수 있다.
+player.fat = true;
+player.lashName = "potato";
+console.log(player)
 
-console.log("your new name is " + myName);
+
+// function
+function sayHello(nameOfPerson, age) {
+  console.log("Hello! my name is " + nameOfPerson + " and I'm " + age);
+}
+
+sayHello("uk", 10);
+sayHello("lynn", 20);
+sayHello("dal", 30);
+
+
+function plus(firstNumber, secondNumber) {
+  console.log(firstNumber + secondNumber);
+}
+
+plus(); // NaN Not a Number 출력됨
+plus(8, 60);
+
+
+const player2 = {
+  name: "uk",
+  sayHello: function (othersPersonsName) {
+    console.log("Hello! " + othersPersonsName + "nice to meet you!");
+  },
+};
+
+console.log(player2.name);
+player2.sayHello("lynn");
+
