@@ -1,45 +1,30 @@
-// object
-const player = {
-  name: "uk",
-  points: 10,
-  fat: false,
-};
+// return
+const age = 96;
 
-console.log(player);
-console.log(player.name);
-console.log(player["name"]);
-
-// 여기서의 const는 object이기 때문에 내부의 필드값은 수정할 수 있다.
-player.fat = true;
-player.lashName = "potato";
-console.log(player)
-
-
-// function
-function sayHello(nameOfPerson, age) {
-  console.log("Hello! my name is " + nameOfPerson + " and I'm " + age);
+function calculateKrAge(ageOfForeigner) {
+  return ageOfForeigner + 2;
 }
 
-sayHello("uk", 10);
-sayHello("lynn", 20);
-sayHello("dal", 30);
+const krAge = calculateKrAge(age);
 
+console.log(krAge); // 98
 
-function plus(firstNumber, secondNumber) {
-  console.log(firstNumber + secondNumber);
-}
-
-plus(); // NaN Not a Number 출력됨
-plus(8, 60);
-
-
-const player2 = {
-  name: "uk",
-  sayHello: function (othersPersonsName) {
-    console.log("Hello! " + othersPersonsName + "nice to meet you!");
+const calculator = {
+  plus: function(a, b) {
+    return console.log(a + b);
+  },
+  minus: function (a, b) {
+    return a - b;
+  },
+  times: function (a, b) {
+    return a * b;
+  },
+  divide: function (a, b) {
+    return a / b;
+  },
+  power: function(a, b) {
+    return a ** b
   },
 };
 
-console.log(player2.name);
-player2.sayHello("lynn");
-
+const plusResult = calculator.plus(2, 3);
