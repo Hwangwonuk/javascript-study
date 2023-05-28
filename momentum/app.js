@@ -1,15 +1,12 @@
-const h1 = document.querySelector(".hello:first-child h1");
+// const loginForm = document.querySelector("#login-form");
+// const loginInput = loginForm.querySelector("input");
+// const loginButton = loginForm.querySelector("button");
 
-function handleTitleClick() {
-  h1.classList.toggle("clicked");
-  // const clickedClass = "clicked";
-  // if (h1.classList.contains(clickedClass)) {
-  //   h1.classList.remove(clickedClass);
-  // } else {
-  //   h1.classList.add(clickedClass);
-  // }
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
+
+function handleLoginBtnClick() {
+  console.dir(loginInput.value);
+  // console.log("click!!!!");
 }
-
-// addEventListener를 사용하면 removeEventListener로 삭제할 수 있다.
-h1.addEventListener("click", handleTitleClick);
-
+loginButton.addEventListener("click", handleLoginBtnClick)
