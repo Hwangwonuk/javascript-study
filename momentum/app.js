@@ -1,12 +1,13 @@
-// const loginForm = document.querySelector("#login-form");
-// const loginInput = loginForm.querySelector("input");
-// const loginButton = loginForm.querySelector("button");
-
 const loginInput = document.querySelector("#login-form input");
 const loginButton = document.querySelector("#login-form button");
 
 function handleLoginBtnClick() {
-  console.dir(loginInput.value);
-  // console.log("click!!!!");
+  const username = loginInput.value;
+  // if (username === "") {
+  //   alert("Please write tour name");
+  // } else if(username.length > 15) {
+  //   alert("Your name is too long.");
+  // }
+  console.log(username);
 }
 loginButton.addEventListener("click", handleLoginBtnClick)
