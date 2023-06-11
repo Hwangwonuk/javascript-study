@@ -8,21 +8,17 @@ const USERNAME_KEY = "username";
 function onLoginSubmit(event) {
   event.preventDefault(); // 브라우저의 기본 동작을 막는다.
   loginForm.classList.add(HIDDEN_CLASSNAME);
-  localStorage.setItem(USERNAME_KEY, loginInput.value);
-  paintGreetings();
+  const username = loginInput.value;
+  localStorage.setItem(USERNAME_KEY, username);
+  paintGreetings(username);
 }
 
-function paintGreetings() {
-  const username = localStorage.getItem(USERNAME_KEY);
+function paintGreetings(username) {
   greeting.innerText = `Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-loginForm.addEventListener("submit", onLoginSubmit);
-
 const savedUsername = localStorage.getItem(USERNAME_KEY);
-
-console.log(savedUsername);
 
 if (savedUsername === null) {
   // show the form
@@ -30,5 +26,5 @@ if (savedUsername === null) {
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   // show the greetings
-  paintGreetings();
+  paintGreetings(savedUsername);
 }
