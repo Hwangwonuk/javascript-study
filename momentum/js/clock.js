@@ -4,4 +4,4 @@ function sayHello() {
   console.log("hello");
 }
 
-setInterval(sayHello, 5000); // function, millisecond
+setTimeout(sayHello, 5000);
