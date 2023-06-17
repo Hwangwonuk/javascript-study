@@ -11,3 +11,5 @@ function getClock() {
 
 getClock(); // 즉시호출
 setInterval(getClock, 1000); // load된 후 1초마다 호출
+
+//test
