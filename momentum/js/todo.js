@@ -56,4 +56,3 @@ function sexyFilter() {
 }
 
 [1, 2, 3, 4].filter(sexyFilter); // sexyFilter의 return이 true여야 배열의 값이 유지된다. false면 배열에서 지워짐
-
