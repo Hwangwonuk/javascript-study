@@ -12,9 +12,11 @@ function saveToDos() {
 
 function deleteToDo(event) {
   const li = event.target.parentElement;
-  console.log(li.id);
   li.remove();
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id))
+  saveToDos();
 }
+
 function paintToDo(newToDoObj) {
   const li = document.createElement("li");
   li.id = newToDoObj.id;
@@ -54,5 +56,3 @@ if (savedToDos !== null) {
 function sexyFilter() {
 
 }
-
-[1, 2, 3, 4].filter(sexyFilter); // sexyFilter의 return이 true여야 배열의 값이 유지된다. false면 배열에서 지워짐
